@@ -1,0 +1,15 @@
+{
+  "name": "lifemusic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hyunmui/lifemusic-html.git",
+  "author": "Hyeonmin Seon <hyunmui@outlook.kr>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.14.6",
+    "webserver": "^4.0.2"
+  }
+}
