@@ -1,3 +1,87 @@
-img#logo-header {
-  height: 40px;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
 }
+
+body {
+  margin: 0 auto !important;
+  padding: 0 auto !important;
+}
+
+@media (min-width: 768px) {
+  img#logo-header {
+    width: auto !important;
+    height: 80px;
+  }
+
+  .only-mobile {
+    display: none !important;
+  }
+
+  li.nav-item .dropdown-menu {
+    border: 0px;
+    margin: 0px auto;
+    border-radius: 0%;
+  }
+
+  .only-desktop {
+    display: block !important;
+  }
+}
+
+.only-desktop {
+  display: none;
+}
+
+img#logo-header {
+  width: 100%;
+}
+
+header {
+  border-bottom: 1px solid #999;
+}
+
+#menu-area {
+  background-color: #50575f;
+}
+
+li.nav-item .dropdown-menu {
+  background-color: #69727c;
+}
+
+.nav>.nav-item a {
+  color: #fff;
+  font-weight: bold;
+  outline-color: #50575f;
+}
+
+.nav>.nav-item a.dropdown-item {
+  font-weight: normal;
+}
+
+.nav>.nav-item a.dropdown-item:hover {
+  color: #222;
+  background-color: #50575f;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #999;
+}
+
+
+/*
+temp
+*/
+.display-4 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.example-post {}
