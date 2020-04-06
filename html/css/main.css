@@ -12,7 +12,7 @@ body {
 @media (min-width: 768px) {
   img#logo-header {
     width: auto !important;
-    height: 80px;
+    height: 125px;
   }
 
   .only-mobile {
@@ -41,6 +41,10 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+img.bd-placeholder-img {
+  width: 250px; height: 250px;
 }
 
 .only-desktop {
@@ -83,11 +87,48 @@ main {
 }
 
 footer {
-  margin-top: 5rem;
-  padding-top: 1rem;
+  margin: 2rem;
+  padding-top: 2rem;
   border-top: 2px solid #999;
 }
 
+.review-post {
+  border-bottom: 1px solid #999;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.review-content-cut {
+  font-size: 1.2rem;
+}
+
+table.popular-rank tbody h4 { /* song */
+  font-size: 1.2rem;
+}
+
+table.popular-rank tbody h5 { /* artist */
+  font-size: 1rem;
+}
+
+table.popular-rank tbody th,
+table.popular-rank tbody td a {
+  color: #333;
+  text-decoration: none;
+}
+
+table.popular-rank tbody td a:hover {
+  color: #999 !important;
+}
+
+table.popular-rank tbody th[scope="row"] {
+  vertical-align: middle;
+}
+
+table.popular-rank tbody tr:first-child th[scope="row"],
+table.popular-rank tbody tr:first-child td a {
+  font-weight: bold;
+  color:#c71616;
+}
 
 /*
 temp
