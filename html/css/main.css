@@ -1,17 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
 
+/* START Common style ------------------------- */
+
 * {
   font-family: "Noto Sans KR", sans-serif;
 }
 
 body {
   margin: 0 auto !important;
-  padding: 0 auto !important;
+  padding: 0;
 }
 
 a {
   color: #2d6098;
 }
+
+header {
+  border-bottom: 2px solid #999;
+  z-index: 999;
+  background-color: #fff;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+footer {
+  color: #fff;
+  position: relative;
+  z-index: 998;
+}
+
+footer > div {
+  background-color: #50575f;
+  padding: 2rem 15px 2rem 15px;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0 auto;
+  color: #fff;
+}
+
+.nav-breadcrumb {
+  line-height: 1;
+}
+
+main .breadcrumb a {
+  font-size: 0.9rem;
+}
+
+a.mailto {
+  color: #eee;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* END Common style --------------------------- */
+
+/* START for Screen Size ---------------------- */
 
 @media (min-width: 768px) {
   img#logo-header {
@@ -52,7 +99,8 @@ a {
 }
 
 img.bd-placeholder-img {
-  width: 250px; height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 .only-desktop {
@@ -67,60 +115,60 @@ img#logo-header {
   width: 100%;
 }
 
-header {
-  border-bottom: 2px solid #999;
-  z-index: 999;
-  background-color: #fff;
-}
+/* END for Screen Size ----------------------- */
 
+/* START #menu-area -------------------------- */
 #menu-area {
   background-color: #50575f;
 }
 
-li.nav-item .dropdown-menu {
+#menu-area li.nav-item .dropdown-menu {
   background-color: #69727c;
 }
 
-.nav>.nav-item a {
+#menu-area .nav > .nav-item a {
   color: #fff;
   font-weight: bold;
   outline-width: 0;
 }
 
-a.nav-link.active {
-  color: #d8ea41;
+#menu-area a.nav-link.active {
+  color: #41b5ea;
 }
 
-.nav>.nav-item a.dropdown-item {
+#menu-area .nav > .nav-item a.dropdown-item {
   font-weight: normal;
 }
 
-.nav>.nav-item a.dropdown-item.active {
-  color: #d8ea41;
+#menu-area .nav > .nav-item a.dropdown-item.active {
+  color: #41b5ea;
   background-color: #69727c;
 }
 
-.nav>.nav-item a.dropdown-item:hover {
+#menu-area .nav > .nav-item a.dropdown-item:hover {
   color: #222;
   background-color: #50575f;
 }
 
-main {
-  margin-top: 1rem;
-}
+/* END #menu-area ----------------------------- */
 
-footer {
-  margin: 2rem 0 0 0;
-  padding: 2rem 0 2rem 0;
-  background-color: #50575f;
+/* START #record-info ------------------------- */
+
+#record-info a.nav-link.active {
   color: #fff;
-  position: relative;
-  z-index: 998;
+  background-color: #2d6098;
 }
 
-footer p {
-  margin: 0 auto;
+#record-info .tab-content {
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
 }
+
+/* END #record-info --------------------------- */
+
+/* START index page --------------------------- */
 
 .review-post {
   border-bottom: 1px solid #999;
@@ -132,12 +180,12 @@ footer p {
   font-size: 1.2rem;
 }
 
-table.popular-rank tbody h4 { /* song */
-  font-size: 1.2rem;
+table.popular-rank tbody h4 {
+  font-size: 1.2rem; /* song */
 }
 
-table.popular-rank tbody h5 { /* artist */
-  font-size: 1rem;
+table.popular-rank tbody h5 {
+  font-size: 1rem; /* artist */
 }
 
 table.popular-rank tbody th,
@@ -157,13 +205,17 @@ table.popular-rank tbody th[scope="row"] {
 table.popular-rank tbody tr:first-child th[scope="row"],
 table.popular-rank tbody tr:first-child td a {
   font-weight: bold;
-  color:#c71616;
+  color: #c71616;
 }
 
 .display-4 {
   font-size: 2.5rem;
   letter-spacing: -1px;
 }
+
+/* END index page ----------------------------- */
+
+/* START list page ---------------------------- */
 
 .board table tbody th,
 .board table tbody td {
@@ -174,20 +226,4 @@ table.popular-rank tbody tr:first-child td a {
   text-align: center;
 }
 
-.board table thead th {
-  text-align: center;
-}
-
-.nav-breadcrumb {
-  line-height: 1.0;
-}
-
-main .breadcrumb a {
-  font-size: 0.9rem;
-}
-
-a.mailto {
-  color: #eee;
-  text-decoration: underline;
-  font-style: italic;
-}
+/* END list page ------------------------------ */

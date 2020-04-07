@@ -48,7 +48,7 @@
   <script src="/js/main.js"></script>
 
   <script>
-    $(function() {
+    $(function () {
       $('#genres').selectpicker();
     })
   </script>
@@ -58,7 +58,7 @@
   <header class="container-fluid">
     <div class="row">
       <div class="offset-3 col-6 offset-md-0 col-md-12 text-center">
-        <img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" />
+        <a href="/"><img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" /></a>
       </div>
       <div class="col-3 navbar-light d-flex justify-content-center align-items-center only-mobile">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-area"
@@ -72,7 +72,7 @@
       <!-- desktop -->
       <ul class="nav justify-content-between w-50">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
+          <a class="nav-link dropdown-toggle active" id="menu-item-record" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">Record</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-record">
             <a class="dropdown-item" href="#">Single</a>
@@ -117,19 +117,43 @@
     </div>
   </header>
   <main role="main" class="container">
-    <h2 class="font-italic font-weight-bold pl-md-3 text-uppercase">Contact Us</h2>
+    <h2 class="font-italic font-weight-bold pl-md-3 text-uppercase">回:Labyrinth</h2>
     <nav class="nav-breadcrumb" aria-label="breadcrumb">
       <ol class="breadcrumb bg-transparent">
         <li class="breadcrumb-item"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="#">About</a></li>
-        <li class="breadcrumb-item active"><a href="/about/me.html">Developer Info</a></li>
+        <li class="breadcrumb-item"><a href="#">Record</a></li>
+        <li class="breadcrumb-item active"><a href="/record/album.html">Album</a></li>
+        <li class="breadcrumb-item active"><a href="/record/detail.html">回:Labyrinth</a></li>
       </ol>
     </nav>
     <!-- TODO: replace Contents -->
-    <p>contents</p>
+    <div id="record-info">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="track-tab" data-toggle="tab" href="#track" role="tab" aria-controls="track"
+            aria-selected="true">Track</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+            aria-selected="false">Reviews</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="track" role="tabpanel" aria-labelledby="track-tab">
+          &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+        <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+          &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+      </div>
+    </div>
   </main>
   <footer id="doc-footer" class="container">
-    <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com" class="mailto">Sunghyuk.Choi</a></p>
+    <div>
+      <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com" class="mailto">Sunghyuk.Choi</a></p>
+    </div>
   </footer>
 </body>
 
