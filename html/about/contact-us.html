@@ -34,6 +34,10 @@
   <script src="/lib/popper.js/dist/umd/popper.min.js"></script>
   <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
+  <!-- Bootstrap-Select -->
+  <link rel="stylesheet" href="/lib/bootstrap-select/dist/css/bootstrap-select.min.css">
+  <script src="/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
   <!-- Font-Awesome -->
   <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.min.css" />
 
@@ -42,6 +46,12 @@
 
   <!-- Javascript -->
   <script src="/js/main.js"></script>
+
+  <script>
+    $(function() {
+      $('#genres').selectpicker();
+    })
+  </script>
 </head>
 
 <body>
@@ -65,97 +75,61 @@
           <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">Record</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-record">
-            <a class="dropdown-item" href="/single">Single</a>
-            <a class="dropdown-item" href="/ep">EP</a>
-            <a class="dropdown-item" href="/album">Album</a>
+            <a class="dropdown-item" href="#">Single</a>
+            <a class="dropdown-item" href="#">EP</a>
+            <a class="dropdown-item" href="/record/album.html">Album</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/artist">Artist</a>
+          <a class="nav-link" href="/artist/list.html">Artist</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="menu-item-genre" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">Genre</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-genre">
-            <a class="dropdown-item" href="/genre/pop">Pop</a>
-            <a class="dropdown-item" href="/genre/rock">Rock</a>
-            <a class="dropdown-item" href="/genre/hiphop">Hiphop</a>
-            <a class="dropdown-item" href="/genre/electronic">Electronic</a>
-            <a class="dropdown-item" href="/genre/jazz">Jazz</a>
-            <a class="dropdown-item" href="/genre/classic">Classic</a>
-            <a class="dropdown-item" href="/genre/blues">Blues</a>
+            <a class="dropdown-item" href="/genre/pop.html">Pop</a>
+            <a class="dropdown-item" href="#">Rock</a>
+            <a class="dropdown-item" href="#">Hiphop</a>
+            <a class="dropdown-item" href="#">Electronic</a>
+            <a class="dropdown-item" href="#">Jazz</a>
+            <a class="dropdown-item" href="#">Classic</a>
+            <a class="dropdown-item" href="#">Blues</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="menu-item-review" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">Reviews</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-review">
-            <a class="dropdown-item" href="/review/records">Record</a>
-            <a class="dropdown-item" href="/review/artists">Artist</a>
-            <a class="dropdown-item" href="/review/song">Song</a>
+            <a class="dropdown-item" href="/review/records.html">Record</a>
+            <a class="dropdown-item" href="#">Artist</a>
+            <a class="dropdown-item" href="#">Song</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="menu-item-about" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">About</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-review">
-            <a class="dropdown-item" href="/about/me">Developer Info</a>
-            <a class="dropdown-item" href="/about/contact-us">Contact Us</a>
+            <a class="dropdown-item" href="/about/me.html">Developer Info</a>
+            <a class="dropdown-item" href="/about/contact-us.html">Contact Us</a>
           </div>
         </li>
       </ul>
-      <!-- mobile -->
-      <!-- <ul class="nav flex-column w-100">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">Record</a>
-          <div class="dropdown-menu" aria-labelledby="menu-item-record">
-            <a class="dropdown-item" href="/single">Single</a>
-            <a class="dropdown-item" href="/ep">EP</a>
-            <a class="dropdown-item" href="/album">Album</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/artist">Artist</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-genre" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">Genre</a>
-          <div class="dropdown-menu" aria-labelledby="menu-item-genre">
-            <a class="dropdown-item" href="/genre/pop">Pop</a>
-            <a class="dropdown-item" href="/genre/rock">Rock</a>
-            <a class="dropdown-item" href="/genre/hiphop">Hiphop</a>
-            <a class="dropdown-item" href="/genre/electronic">Electronic</a>
-            <a class="dropdown-item" href="/genre/jazz">Jazz</a>
-            <a class="dropdown-item" href="/genre/classic">Classic</a>
-            <a class="dropdown-item" href="/genre/blues">Blues</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-review" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">Reviews</a>
-          <div class="dropdown-menu" aria-labelledby="menu-item-review">
-            <a class="dropdown-item" href="/review/records">Record</a>
-            <a class="dropdown-item" href="/review/artists">Artist</a>
-            <a class="dropdown-item" href="/review/song">Song</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-about" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">About</a>
-          <div class="dropdown-menu" aria-labelledby="menu-item-review">
-            <a class="dropdown-item" href="/about/me">Developer Info</a>
-            <a class="dropdown-item" href="/about/contact-us">Contact Us</a>
-          </div>
-        </li>
-      </ul> -->
     </div>
   </header>
   <main role="main" class="container">
-    <h1>Contents</h1>
+    <h2 class="font-italic font-weight-bold pl-md-3 text-uppercase">Contact Us</h2>
+    <nav class="nav-breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent">
+        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="#">About</a></li>
+        <li class="breadcrumb-item active"><a href="/about/contact-us.html">Contact Us</a></li>
+      </ol>
+    </nav>
+    <!-- TODO: replace Contents -->
+    <p>contents</p>
   </main>
-  <footer>
-    <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com">Sunghyuk.Choi</a></p>
+  <footer id="doc-footer" class="container">
+    <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com" class="mailto">Sunghyuk.Choi</a></p>
   </footer>
 </body>
 

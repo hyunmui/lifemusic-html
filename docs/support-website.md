@@ -40,6 +40,9 @@
   - 반응형 웹을 위한 라이브러리, 갖가지 css class 모음집
   - Front 하려면 반드시 알아야 함
   - jQuery 반드시 필요..
+- [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/)
+  - Select 에서 검색이 지원되게 하는 라이브러리
+  - Bootstrap 이 있어야 사용 가능, jquery 사용 필요
 
 ## 테마
 

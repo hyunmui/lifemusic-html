@@ -72,8 +72,8 @@
       <!-- desktop -->
       <ul class="nav justify-content-between w-50">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">Record</!DOCTYPE>
+          <a class="nav-link dropdown-toggle active" id="menu-item-record" data-toggle="dropdown" data-display="static"
+            aria-haspopup="true" href="#">Record</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-record">
             <a class="dropdown-item" href="#">Single</a>
             <a class="dropdown-item" href="#">EP</a>
@@ -81,7 +81,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/artist">Artist</a>
+          <a class="nav-link" href="/artist/list.html">Artist</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="menu-item-genre" data-toggle="dropdown" data-display="static"
@@ -164,10 +164,10 @@
             <th>Rate</th>
             <th>Title</th>
             <th>Artist</th>
-            <th>Release Date</th>
+            <th class="only-desktop-cell">Release</th>
             <th>Writer</th>
-            <th>Created</th>
-            <th>View Count</th>
+            <th class="only-desktop-cell">Created</th>
+            <th>Count</th>
           </tr>
         </thead>
         <tbody>
@@ -186,13 +186,13 @@
             <td>
               <a href="/artist/detail.html">NCT 127</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>123</td>
@@ -212,13 +212,13 @@
             <td>
               <a href="/artist/detail.html">ITZY</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-11-11
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>12</td>
@@ -239,13 +239,13 @@
             <td>
               <a href="/artist/detail.html">안예은</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>222</td>
@@ -265,13 +265,13 @@
             <td>
               <a href="/artist/detail.html">DPR LIVE</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Kim</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>77</td>
@@ -291,13 +291,13 @@
             <td>
               <a href="/artist/detail.html">권순관</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>88</td>
@@ -317,13 +317,13 @@
             <td>
               <a href="/artist/detail.html">세정</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Martin</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>123</td>
@@ -343,13 +343,13 @@
             <td>
               <a href="/artist/detail.html">Uneducated Kid</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Seon</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>123</td>
@@ -369,13 +369,13 @@
             <td>
               <a href="/artist/detail.html">Ten to Ten</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>123</td>
@@ -395,13 +395,13 @@
             <td>
               <a href="/artist/detail.html">오방신과(OBSG)</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">hyunmui</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>123</td>
@@ -421,13 +421,13 @@
             <td>
               <a href="/artist/detail.html">여자친구(GFriend)</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2019-12-23
             </td>
             <td>
               <a href="/reviews/user.html">Choi</a>
             </td>
-            <td>
+            <td class="only-desktop-cell">
               2020-04-07
             </td>
             <td>9999</td>
@@ -451,7 +451,7 @@
       </nav>
     </div>
   </main>
-  <footer>
+  <footer id="doc-footer" class="container">
     <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com" class="mailto">Sunghyuk.Choi</a></p>
   </footer>
 </body>

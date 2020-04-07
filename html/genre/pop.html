@@ -34,6 +34,10 @@
   <script src="/lib/popper.js/dist/umd/popper.min.js"></script>
   <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
+  <!-- Bootstrap-Select -->
+  <link rel="stylesheet" href="/lib/bootstrap-select/dist/css/bootstrap-select.min.css">
+  <script src="/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
   <!-- Font-Awesome -->
   <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.min.css" />
 
@@ -42,6 +46,12 @@
 
   <!-- Javascript -->
   <script src="/js/main.js"></script>
+
+  <script>
+    $(function() {
+      $('#genres').selectpicker();
+    })
+  </script>
 </head>
 
 <body>
@@ -63,7 +73,7 @@
       <ul class="nav justify-content-between w-50">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" href="#">Record</!DOCTYPE>
+            aria-haspopup="true" href="#">Record</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-record">
             <a class="dropdown-item" href="#">Single</a>
             <a class="dropdown-item" href="#">EP</a>
@@ -71,10 +81,10 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/artist">Artist</a>
+          <a class="nav-link" href="/artist/list.html">Artist</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="menu-item-genre" data-toggle="dropdown" data-display="static"
+          <a class="nav-link dropdown-toggle active" id="menu-item-genre" data-toggle="dropdown" data-display="static"
             aria-haspopup="true" href="#">Genre</a>
           <div class="dropdown-menu" aria-labelledby="menu-item-genre">
             <a class="dropdown-item" href="/genre/pop.html">Pop</a>
@@ -107,10 +117,342 @@
     </div>
   </header>
   <main role="main" class="container">
-    <h1>Contents</h1>
+    <h2 class="font-italic font-weight-bold pl-md-3 text-uppercase">Pop Music</h2>
+    <nav class="nav-breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent">
+        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Genre</a></li>
+        <li class="breadcrumb-item active"><a href="/genre/pop.html">Pop</a></li>
+      </ol>
+    </nav>
+    <form class="board-filter">
+      <fieldset>
+        <div class="form-group row">
+          <div class="col-12 col-md-3 mb-2">
+            <select id="genres" class="form-control" data-live-search="true">
+              <optgroup label="Genres">
+                <option>All Genre</option>
+                <option selected>Pop</option>
+                <option>Rock</option>
+                <option>Electronic</option>
+                <option>Classic</option>
+                <option>Jazz</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="col-12 col-md-3 mb-2">
+            <select class="form-control">
+              <option>Title</option>
+              <option>Artist</option>
+              <option>Writer</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-4 mb-2">
+            <input type="text" name="keywords" id="keywords" class="form-control" placeholder="enter keywords..." />
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+            <button class="btn btn-primary btn-block" type="submit">Search</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div class="board">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th>Rate</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th class="only-desktop-cell">Release</th>
+            <th>Writer</th>
+            <th class="only-desktop-cell">Created</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-center">1</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">NCT #127 Neo Zone</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">NCT 127</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">IT'z Me</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">ITZY</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-11-11
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>12</td>
+          </tr>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">OOO</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">안예은</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>222</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">Is Anybody Out There?</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">DPR LIVE</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Kim</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>77</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">Connected</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">권순관</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">화분</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">세정</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Martin</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">선택받은 소년 : The Chosen One</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">Uneducated Kid</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Seon</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">Sound and Vision</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">Ten to Ten</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">오방神과</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">오방신과(OBSG)</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">hyunmui</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th>10</th>
+            <td class="text-center">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </td>
+            <td>
+              <a href="/record/detail.html">回:Labyrinth</a>
+            </td>
+            <td>
+              <a href="/artist/detail.html">여자친구(GFriend)</a>
+            </td>
+            <td class="only-desktop-cell">
+              2019-12-23
+            </td>
+            <td>
+              <a href="/reviews/user.html">Choi</a>
+            </td>
+            <td class="only-desktop-cell">
+              2020-04-07
+            </td>
+            <td>9999</td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><span class="page-link">...</span></li>
+          <li class="page-item"><a class="page-link" href="#">12</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </main>
-  <footer>
-    <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com">Sunghyuk.Choi</a></p>
+  <footer id="doc-footer" class="container">
+    <p class="text-center">Powered By <a href="mailto:likeaglow@gmail.com" class="mailto">Sunghyuk.Choi</a></p>
   </footer>
 </body>
 

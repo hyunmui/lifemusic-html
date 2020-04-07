@@ -10,7 +10,17 @@ $(function () {
     $("li.nav-item .dropdown-menu").css("position", "static");
     $("li.nav-item .dropdown-menu").css("width", "100%");
   }
+
+  // footer position
+  footerPositioning();
+  $(window).resize(footerPositioning);
+  
 });
+
+function footerPositioning() {
+  let diff = $('body').height() - $(document).height();
+  $('footer#doc-footer').css('bottom', diff < 0 ? diff : 0);
+}
 
 function isMobileScreen() {
   return window.innerWidth < 768;

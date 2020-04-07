@@ -33,6 +33,10 @@ a {
     display: block !important;
   }
 
+  .only-desktop-cell {
+    display: table-cell !important;
+  }
+
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
@@ -52,6 +56,10 @@ img.bd-placeholder-img {
 }
 
 .only-desktop {
+  display: none;
+}
+
+.only-desktop-cell {
   display: none;
 }
 
@@ -76,11 +84,20 @@ li.nav-item .dropdown-menu {
 .nav>.nav-item a {
   color: #fff;
   font-weight: bold;
-  outline-color: #50575f;
+  outline-width: 0;
+}
+
+a.nav-link.active {
+  color: #d8ea41;
 }
 
 .nav>.nav-item a.dropdown-item {
   font-weight: normal;
+}
+
+.nav>.nav-item a.dropdown-item.active {
+  color: #d8ea41;
+  background-color: #69727c;
 }
 
 .nav>.nav-item a.dropdown-item:hover {
@@ -97,10 +114,8 @@ footer {
   padding: 2rem 0 2rem 0;
   background-color: #50575f;
   color: #fff;
-  position: fixed;
+  position: relative;
   z-index: 998;
-  bottom: 0;
-  width: 100%;
 }
 
 footer p {
