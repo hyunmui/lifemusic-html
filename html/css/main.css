@@ -9,6 +9,10 @@ body {
   padding: 0 auto !important;
 }
 
+a {
+  color: #2d6098;
+}
+
 @media (min-width: 768px) {
   img#logo-header {
     width: auto !important;
@@ -57,6 +61,8 @@ img#logo-header {
 
 header {
   border-bottom: 2px solid #999;
+  z-index: 999;
+  background-color: #fff;
 }
 
 #menu-area {
@@ -87,9 +93,18 @@ main {
 }
 
 footer {
-  margin: 2rem;
-  padding-top: 2rem;
-  border-top: 2px solid #999;
+  margin: 2rem 0 0 0;
+  padding: 2rem 0 2rem 0;
+  background-color: #50575f;
+  color: #fff;
+  position: fixed;
+  z-index: 998;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0 auto;
 }
 
 .review-post {
@@ -130,10 +145,34 @@ table.popular-rank tbody tr:first-child td a {
   color:#c71616;
 }
 
-/*
-temp
-*/
 .display-4 {
   font-size: 2.5rem;
   letter-spacing: -1px;
+}
+
+.board table tbody th,
+.board table tbody td {
+  font-size: 0.8rem;
+}
+
+.board table tbody th {
+  text-align: center;
+}
+
+.board table thead th {
+  text-align: center;
+}
+
+.nav-breadcrumb {
+  line-height: 1.0;
+}
+
+main .breadcrumb a {
+  font-size: 0.9rem;
+}
+
+a.mailto {
+  color: #eee;
+  text-decoration: underline;
+  font-style: italic;
 }
