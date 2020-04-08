@@ -4,6 +4,11 @@
 
 * {
   font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 11px;
 }
 
 body {
@@ -12,7 +17,7 @@ body {
 }
 
 a {
-  color: #2d6098;
+  /* color: #2d6098; */
 }
 
 header {
@@ -50,10 +55,19 @@ main .breadcrumb a {
   font-size: 0.9rem;
 }
 
+table thead th,
+table tbody th {
+  text-align: center;
+}
+
 a.mailto {
   color: #eee;
   text-decoration: underline;
   font-style: italic;
+}
+
+.record-info-item {
+  border-left: 0;
 }
 
 /* END Common style --------------------------- */
@@ -63,7 +77,7 @@ a.mailto {
 @media (min-width: 768px) {
   img#logo-header {
     width: auto !important;
-    height: 125px;
+    height: 65px;
   }
 
   .only-mobile {
@@ -84,8 +98,21 @@ a.mailto {
     display: table-cell !important;
   }
 
+  tfoot.only-desktop {
+    display: table-footer-group !important;
+  }
+
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+
+  #record-info img.record-jacket {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  .record-info-item {
+    border-left: 5px double #dee2e6 !important;
   }
 }
 
@@ -146,7 +173,6 @@ img#logo-header {
 }
 
 #menu-area .nav > .nav-item a.dropdown-item:hover {
-  color: #222;
   background-color: #50575f;
 }
 
@@ -154,16 +180,45 @@ img#logo-header {
 
 /* START #record-info ------------------------- */
 
+#record-info {
+  border: 1px solid #dee2e6;
+  padding: 1rem;
+}
+
 #record-info a.nav-link.active {
   color: #fff;
   background-color: #2d6098;
+}
+
+#record-info div.record-info {
+  margin-bottom: 1rem;
+}
+
+#record-info img.record-jacket {
+  width: 100%;
+}
+
+div#track table {
+  margin-bottom: 0; 
 }
 
 #record-info .tab-content {
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
+}
+
+#record-info .review-main {
   padding: 1rem;
+}
+
+.record-info label {
+  color: #41b5ea;
+  font-weight: bold;
+}
+
+.record-info .record-info-item {
+  font-size: 1.3rem;
 }
 
 /* END #record-info --------------------------- */
@@ -171,13 +226,47 @@ img#logo-header {
 /* START index page --------------------------- */
 
 .review-post {
-  border-bottom: 1px solid #999;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 0rem;
+}
+
+.record-info p {
+  margin-bottom: 0;
+}
+
+.review-divider {
+  margin: 2rem;
+}
+
+.review-divider .divider-left {
+  border: 1px solid;
+  border-image: linear-gradient(to left, #dee2e6, #fff);
+  border-image-slice: 1;
+}
+
+.review-divider .divider-right {
+  border: 1px solid;
+  border-image: linear-gradient(to right, #dee2e6, #fff);
+  border-image-slice: 1;
 }
 
 .review-content-cut {
   font-size: 1.2rem;
+}
+
+.review-content {
+  font-size: 1.2rem;
+}
+
+.review-content p {
+  text-indent: 1ch;
+}
+
+.review-post-meta {
+  font-size: 1rem;
+}
+
+.review-updown p {
+  font-size: 0.6rem;
 }
 
 table.popular-rank tbody h4 {
@@ -220,10 +309,6 @@ table.popular-rank tbody tr:first-child td a {
 .board table tbody th,
 .board table tbody td {
   font-size: 0.8rem;
-}
-
-.board table tbody th {
-  text-align: center;
 }
 
 /* END list page ------------------------------ */

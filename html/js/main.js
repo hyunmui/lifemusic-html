@@ -14,12 +14,22 @@ $(function () {
   // footer position
   footerPositioning();
   $(window).resize(footerPositioning);
-  
+
+  // Javascript to enable link to tab
+  var url = document.location.toString();
+  if (url.match("#")) {
+    $('.nav-tabs a[href="#' + url.split("#")[1] + '"]').tab("show");
+  }
+
+  // Change hash for page-reload
+  // $(".nav-tabs a").on("shown.bs.tab", function (e) {
+  //   window.location.hash = e.target.hash;
+  // });
 });
 
 function footerPositioning() {
-  let diff = $('body').height() - $(document).height();
-  $('footer#doc-footer').css('bottom', diff < 0 ? diff : 0);
+  let diff = $("body").height() - $(document).height();
+  $("footer#doc-footer").css("bottom", diff < 0 ? diff : 0);
 }
 
 function isMobileScreen() {
