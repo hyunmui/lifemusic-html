@@ -70,6 +70,26 @@ a.mailto {
   border-left: 0;
 }
 
+.carousel-indicators li {
+  height: 5px;
+}
+
+.bd-placeholder-img-lg {
+  font-size: calc(1.475rem + 2.7vw) !important;
+}
+
+#main-carousel {
+  margin-bottom: 2rem;
+}
+
+#main-carousel .carousel-item {
+  height: 300px;
+}
+
+#main-carousel .carousel-item svg {
+  height: 300px;
+}
+
 /* END Common style --------------------------- */
 
 /* START for Screen Size ---------------------- */
@@ -88,18 +108,6 @@ a.mailto {
     border: 0px;
     margin: 0px auto;
     border-radius: 0%;
-  }
-
-  .only-desktop {
-    display: block !important;
-  }
-
-  .only-desktop-cell {
-    display: table-cell !important;
-  }
-
-  tfoot.only-desktop {
-    display: table-footer-group !important;
   }
 
   .bd-placeholder-img-lg {
@@ -126,16 +134,8 @@ a.mailto {
 }
 
 img.bd-placeholder-img {
-  width: 250px;
-  height: 250px;
-}
-
-.only-desktop {
-  display: none;
-}
-
-.only-desktop-cell {
-  display: none;
+  width: 180px;
+  height: 180px;
 }
 
 img#logo-header {

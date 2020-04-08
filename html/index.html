@@ -153,16 +153,36 @@
   </header>
   <main role="main" class="container">
     <div class="top">
-      <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4 font-italic">This place will be slider area</h1>
-          <p class="lead my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolores, esse
-            excepturi, quos, facere iusto ratione nulla minus illo libero ducimus pariatur voluptatibus commodi corrupti
-            ut autem mollitia quam. Inventore?</p>
+      <div id="main-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#main-carousel" data-slide-to="1" class=""></li>
+          <li data-target="#main-carousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#main-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <div class="row mb-2">
-        <h3 class="mb-4 pb-4 col-12 border-bottom font-italic font-weight-bold">Recent Released</h3>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="mb-4 pb-4 border-bottom font-italic font-weight-bold">Recent Released</h3>
+        </div>
         <div class="col-md-6">
           <div
             class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -171,9 +191,9 @@
               <h3 class="mb-0">Time For Us</h3>
               <div class="mb-1 text-muted">Jan 14</div>
               <p class="card-text mb-auto">여자친구</p>
-              <a href="#" class="stretched-link">Show more..</a>
+              <a href="/record/detail.html" class="stretched-link">Show more..</a>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-md-block">
               <img class="bd-placeholder-img" src="/images/sample/gfriend_time-for-us.jpg" alt="여자친구 - Time for us" />
             </div>
           </div>
@@ -186,9 +206,9 @@
               <h3 class="mb-0">The 1975</h3>
               <div class="mb-1 text-muted">Oct 2</div>
               <p class="mb-auto">The 1975</p>
-              <a href="#" class="stretched-link">Show more..</a>
+              <a href="/record/detail.html" class="stretched-link">Show more..</a>
             </div>
-            <div class="col-auto d-none d-lg-block">
+            <div class="col-auto d-none d-md-block">
               <img class="bd-placeholder-img" src="/images/sample/the1975_the-1975.png"
                 alt="The 1975 - The 1975 (album)" />
             </div>
@@ -200,7 +220,7 @@
       <div class="row">
         <div class="col-md-8 review-main">
           <h3 class="pb-4 mb-4 font-italic border-bottom font-weight-bold">
-            Record Reviews
+            New Reviews
           </h3>
 
           <div class="review-post">
@@ -222,6 +242,11 @@
             </div>
           </div><!-- /.review-post -->
 
+          <div class="review-divider row">
+            <div class="offset-3 col-3 divider-left"></div>
+            <div class="col-3 divider-right"></div>
+          </div>
+
           <div class="review-post">
             <h2 class="review-post-title"><a href="#">90년대 얼터너티브 락의 진면목</a></h2>
             <p class="review-post-meta">October 12, 2019 by <a href="#">Seon</a></p>
@@ -238,6 +263,11 @@
               <a href="#">MORE..</a>
             </div>
           </div><!-- /.review-post -->
+
+          <div class="review-divider row">
+            <div class="offset-3 col-3 divider-left"></div>
+            <div class="col-3 divider-right"></div>
+          </div>
 
           <div class="review-post">
             <h2 class="review-post-title"><a href="#">너의 생각을 뛰어넘는 상상 이상의 음악</a></h2>
