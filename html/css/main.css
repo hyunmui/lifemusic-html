@@ -21,9 +21,26 @@ a {
 }
 
 header {
-  border-bottom: 2px solid #999;
+  /* border-bottom: 2px solid #999; */
   z-index: 999;
   background-color: #fff;
+}
+
+header div.top-area {
+  height: 15px;
+}
+
+header #mobile-menu-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+header .user-buttons {
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
 }
 
 main {
@@ -95,15 +112,6 @@ a.mailto {
 /* START for Screen Size ---------------------- */
 
 @media (min-width: 768px) {
-  img#logo-header {
-    width: auto !important;
-    height: 65px;
-  }
-
-  .only-mobile {
-    display: none !important;
-  }
-
   li.nav-item .dropdown-menu {
     border: 0px;
     margin: 0px auto;
@@ -122,6 +130,11 @@ a.mailto {
   .record-info-item {
     border-left: 5px double #dee2e6 !important;
   }
+
+  img.bd-placeholder-img {
+    width: 180px !important;
+    height: 180px !important;
+  }
 }
 
 .bd-placeholder-img {
@@ -134,12 +147,13 @@ a.mailto {
 }
 
 img.bd-placeholder-img {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
 }
 
 img#logo-header {
-  width: 100%;
+  width: auto !important;
+  height: 65px;
 }
 
 /* END for Screen Size ----------------------- */

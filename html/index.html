@@ -46,15 +46,18 @@
 
 <body>
   <header class="container-fluid">
-    <div class="row">
-      <div class="offset-3 col-6 offset-md-0 col-md-12 text-center">
-        <a href="/"><img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" /></a>
-      </div>
-      <div class="col-3 navbar-light d-flex justify-content-center align-items-center only-mobile">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-area"
+    <div class="row d-flex">
+      <div class="col-2 navbar-light d-flex justify-content-center align-items-center d-md-none">
+        <button id="mobile-menu-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-area"
           aria-controls="menu-area" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="offset-md-2 col-8 text-center">
+        <a href="/"><img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" /></a>
+      </div>
+      <div class="user-buttons text-uppercase">
+        <p><a href="/user/login.html">로그인</a> | <a href="/user/register.html">회원가입</a></p>
       </div>
     </div>
     <!-- if not mobile, add class 'show' -->
@@ -193,7 +196,7 @@
               <p class="card-text mb-auto">여자친구</p>
               <a href="/record/detail.html" class="stretched-link">Show more..</a>
             </div>
-            <div class="col-auto d-none d-md-block">
+            <div class="col-auto">
               <img class="bd-placeholder-img" src="/images/sample/gfriend_time-for-us.jpg" alt="여자친구 - Time for us" />
             </div>
           </div>
@@ -208,7 +211,7 @@
               <p class="mb-auto">The 1975</p>
               <a href="/record/detail.html" class="stretched-link">Show more..</a>
             </div>
-            <div class="col-auto d-none d-md-block">
+            <div class="col-auto">
               <img class="bd-placeholder-img" src="/images/sample/the1975_the-1975.png"
                 alt="The 1975 - The 1975 (album)" />
             </div>

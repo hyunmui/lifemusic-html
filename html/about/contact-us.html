@@ -56,15 +56,18 @@
 
 <body>
   <header class="container-fluid">
-    <div class="row">
-      <div class="offset-3 col-6 offset-md-0 col-md-12 text-center">
-        <a href="/"><img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" /></a>
-      </div>
-      <div class="col-3 navbar-light d-flex justify-content-center align-items-center only-mobile">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-area"
+    <div class="row d-flex">
+      <div class="col-2 navbar-light d-flex justify-content-center align-items-center d-md-none">
+        <button id="mobile-menu-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-area"
           aria-controls="menu-area" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="offset-md-2 col-8 text-center">
+        <a href="/"><img id="logo-header" src="/images/logo/logo-header.png" alt="LIFEMUSIC" /></a>
+      </div>
+      <div class="user-buttons text-uppercase">
+        <p><a href="/user/login.html">로그인</a> | <a href="/user/register.html">회원가입</a></p>
       </div>
     </div>
     <!-- if not mobile, add class 'show' -->
@@ -114,6 +117,51 @@
           </div>
         </li>
       </ul>
+      <!-- mobile -->
+      <!-- <ul class="nav flex-column w-100">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="menu-item-record" data-toggle="dropdown" data-display="static"
+            aria-haspopup="true" href="#">Record</a>
+          <div class="dropdown-menu" aria-labelledby="menu-item-record">
+            <a class="dropdown-item" href="#">Single</a>
+            <a class="dropdown-item" href="#">EP</a>
+            <a class="dropdown-item" href="/record/album.html">Album</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/artist/list.html">Artist</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="menu-item-genre" data-toggle="dropdown" data-display="static"
+            aria-haspopup="true" href="#">Genre</a>
+          <div class="dropdown-menu" aria-labelledby="menu-item-genre">
+            <a class="dropdown-item" href="/genre/pop.html">Pop</a>
+            <a class="dropdown-item" href="#">Rock</a>
+            <a class="dropdown-item" href="#">Hiphop</a>
+            <a class="dropdown-item" href="#">Electronic</a>
+            <a class="dropdown-item" href="#">Jazz</a>
+            <a class="dropdown-item" href="#">Classic</a>
+            <a class="dropdown-item" href="#">Blues</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="menu-item-review" data-toggle="dropdown" data-display="static"
+            aria-haspopup="true" href="#">Reviews</a>
+          <div class="dropdown-menu" aria-labelledby="menu-item-review">
+            <a class="dropdown-item" href="/review/records.html">Record</a>
+            <a class="dropdown-item" href="#">Artist</a>
+            <a class="dropdown-item" href="#">Song</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="menu-item-about" data-toggle="dropdown" data-display="static"
+            aria-haspopup="true" href="#">About</a>
+          <div class="dropdown-menu" aria-labelledby="menu-item-review">
+            <a class="dropdown-item" href="/about/me.html">Developer Info</a>
+            <a class="dropdown-item" href="/about/contact-us.html">Contact Us</a>
+          </div>
+        </li>
+      </ul> -->
     </div>
   </header>
   <main role="main" class="container">
